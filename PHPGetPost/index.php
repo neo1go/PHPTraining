@@ -30,7 +30,9 @@
 //               Besser, um vertrauliche Daten zu übermittlen
 
 echo "{$_POST["username"]} <br>";
-echo $_POST["password"] . "<br>";
+echo $_POST["password"] . "<br>";   
+
+
 ?>
 
 
