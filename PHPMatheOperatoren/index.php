@@ -30,7 +30,9 @@ $total=null;
 //$total=ceil($x); //Aufrunden
 //$total=sqrt($x);  //Wurzel
 //$total=pow($x,$y);  //x hoch y
-$total=max($x,$y,$z);  //höchster Wert wird ermittelt
-$total=min($x,$y,$z);  //kleinster Wert wird ermittelt
+//$total=max($x,$y,$z);  //höchster Wert wird ermittelt
+//$total=min($x,$y,$z);  //kleinster Wert wird ermittelt
+//$total=pi();  //pi mit 13 Nachkommastellen
+$total=rand(1,100); //Zufallsgenerator
 echo $total;
 ?>
