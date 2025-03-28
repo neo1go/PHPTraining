@@ -34,8 +34,13 @@ $capitals= array("USA"=>"Washington D.C.",
 // HTTP-POST an das Skript gesendet wurden, in der Regel aus dem Body einer HTTP-Anfrage
 // wie z.B. einem HTML-Formular mit method="post". Der body Begriff bezieht sich hier nicht auf den
 // html-Bereich sondern die Struktur des Datenpaketes.
-$capital=$capitals[$_POST["country"]];
+
+
+
+
+$capital=$capitals[$_POST["country"]];                                              //auf Port 3002 eingeben
 echo "the capital of {$_POST["country"]}  is {$capital}.";
+
 
 //--------------------------------------------
 // Ausgabe, basierend auf dem Key
@@ -84,6 +89,21 @@ foreach($values as $value){
 /*
 foreach($capitals as $key => $value){
    echo"{$key} = {$value} <br>";
+}
+*/
+
+//In php gibt es kein reguläres Hashset. dies ist eine Möglichkeit, einen Wert zu setzen:
+/*
+$hashSet=[];
+$hashSet[3]=true;
+$hashSet[2]=true;
+$hashSet[10]=true;
+
+if(isset($hashSet[2])){
+echo "2 ist vorhanden.";
+}
+else{
+    echo"2 ist nicht vorhanden.";
 }
 */
 ?>

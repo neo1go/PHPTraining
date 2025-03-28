@@ -6,6 +6,27 @@
 $foods=array("apple","orange","banana","cocnut");
 
 
+$nums=array(1,2,3,1,2,1,2,1,1,1,2,1);
+$nums=array_count_values($nums);// jede Anzahl/Aufkommen einer Zahl im Array wird gezählt. 
+                                       // Dies erzeugt ein associate Array mit key Value Paaren.
+
+arsort($nums); // associate reverse sort. Sortiert ein AA (Associate Array) rückwärts, also desc,  
+                       // so dass der erste Key die höchste value hat.
+//ACHTUNG: Einer normaler sort() verliert die keys und behält nur die values. arsort() behält die values.
+//Somit ist dies die gängige Praxis und effizienter. 
+//
+//um den key mit dem kleinsten Wert vorne zu erhalten, kann man asort() nutzen. (associate sort)
+
+
+$mostFrequent= array_key_first($nums); //Gibt den ersten Key eines AA aus.
+echo "Die am häufigsten vorkommende Zahl ist {$mostFrequent}.<br> ";
+
+
+foreach($nums as $num => $frq){
+    echo "$num  tritt  $frq mal im Array auf.<br>";
+    
+}
+
 //echo $foods[0];  //hiermit wird ein gezielter index angesprochen und ausgegeben
 
 //--------------------------
@@ -27,8 +48,10 @@ $foods=array("apple","orange","banana","cocnut");
 
 
 //zeigt alle Einträge des Arrays
+/*
 foreach($foods as $f)
 {
     echo"{$f}<br>";
 }
+    */
 ?>
